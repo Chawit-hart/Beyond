@@ -35,8 +35,14 @@ const PrimarySearchAppBar = ({ totalItems }) => {
       <AppBar position="fixed" className={classes.appBar} color="inherit">
         <Toolbar>
           <Typography component={Link} to="/" variant="h6" className={classes.title} color="inherit">
-            <img src={logo} alt="commerce.js" height="25px" className={classes.image} /> Commerce.js
+            <img src={logo} alt="commerce.js" height="25px" className={classes.image} /> Beyond
           </Typography>
+          <Link to="first" style={{ textDecoration: 'none' }}>
+              <MenuItem style={{ paddingLeft: 20,color: 'black',fontWeight:'bold',display: 'inline-block' }}>Home</MenuItem>
+              <MenuItem style={{ paddingLeft: 20,color: 'black',fontWeight:'bold',display: 'inline-block' }}>Products</MenuItem>
+              <MenuItem style={{ paddingLeft: 20,color: 'black', fontWeight:'bold',display: 'inline-block' }}>About us</MenuItem>
+              <MenuItem style={{ paddingLeft: 20,color: 'black', fontWeight: 'bold',display: 'inline-block' }}>Contact</MenuItem>
+          </Link>
           <div className={classes.grow} />
           {location.pathname === '/' && (
           <div className={classes.button}>
